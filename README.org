@@ -12,9 +12,8 @@ pushed occasionally.
     - Directory =$BUCKET_NAME=
       - File =RGWBucketInfo.json= - JSON serialized =RGWBucketInfo=
       - Directory =objects/=
-        - Directory =hash(rgw_obj_key.get_index_key_name())=
-          - File =rgw_bucket_dir_entry.json= - JSON serialized
-            =rgw_bucket_dir_entry=
+        - Directory =hash(rgw_obj_key.name)=
+          - File =rgw_bucket_dir_entry.json= - JSON serialized  =rgw_bucket_dir_entry=
           - File =data= - raw object data
   - Directory =users/= - User data TBD
 
