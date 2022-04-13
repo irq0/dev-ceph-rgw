@@ -1,0 +1,9 @@
+{
+    "bucket": {
+	"name": "testbucket",
+	"marker": "",
+	"bucket_id": 2342,
+	"tenant": "root"
+    },
+    "owner": "seri"
+}

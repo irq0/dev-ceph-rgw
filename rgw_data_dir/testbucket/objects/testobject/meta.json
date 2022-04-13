@@ -1,0 +1,16 @@
+{
+    "name": "testobject",
+    "instance": "foo",
+    "meta": {
+	"category": 1,
+	"etag": "foo",
+	"storage_class": "STANDARD",
+	"owner": "seri",
+	"owner_display_name": "seri",
+	"content_type": "text/quatsch",
+	"accounted_size": 23,
+	"user_data": "yes",
+	"appendable": false,
+	"size": 23
+    }
+}
