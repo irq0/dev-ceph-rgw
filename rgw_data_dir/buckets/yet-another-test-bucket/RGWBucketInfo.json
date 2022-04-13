@@ -1,0 +1,10 @@
+{
+    "bucket": {
+	"name": "yet-another-test-bucket",
+	"marker": "",
+	"bucket_id": 1337,
+	"tenant": "root"
+    },
+    "creation_time": "2022-04-13T23:42:00Z",
+    "owner": "test"
+}

@@ -1,12 +1,12 @@
 {
-    "name": "testobject",
+    "name": "second",
     "instance": "foo",
     "meta": {
 	"category": 1,
-	"etag": "foo",
+	"etag": "wat",
 	"storage_class": "STANDARD",
 	"owner": "seri",
-	"owner_display_name": "seri",
+	"owner_display_name": "test",
 	"content_type": "text/quatsch",
 	"accounted_size": 23,
 	"user_data": "yes",

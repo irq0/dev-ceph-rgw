@@ -5,6 +5,28 @@ WIP code lives in
 https://github.com/irq0/ceph/tree/wip/rgw-simple-file. Will be force
 pushed occasionally.
 
+* Design
+** Filesystem Layout
+- Data root - config option /rgw simplefile data path/
+  - Directory =buckets/=
+    - Directory =$BUCKET_NAME=
+      - File =RGWBucketInfo.json= - JSON serialized =RGWBucketInfo=
+      - Directory =objects/=
+        - Directory =hash(rgw_obj_key.get_index_key_name())=
+          - File =rgw_bucket_dir_entry.json= - JSON serialized
+            =rgw_bucket_dir_entry=
+          - File =data= - raw object data
+  - Directory =users/= - User data TBD
+
+*** Tools
+**** Make object hash name
+#+begin_src bash
+echo -n "testobject" | sha256sum
+#+end_src
+
+*** Bucket Name Restrictions
+- https://stackoverflow.com/questions/50480924/regex-for-s3-bucket-name
+- https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html
 * Development
 ** Build
 Add =-DWITH_RADOSGW_SIMPLEFILE=ON= to cmake. For example:

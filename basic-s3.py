@@ -11,9 +11,12 @@ s3 = boto3.client('s3',
                   aws_access_key_id="test",
                   aws_secret_access_key="test")
 
+print("list_buckets:")
 pprint(s3.list_buckets())
+print("list 'testbucket':")
 pprint(s3.list_objects_v2(Bucket="testbucket"))
+print("get_object testbucket/testobject:")
 obj = s3.get_object(Bucket="testbucket",
-                     Key="testobject")
+                    Key="testobject")
 pprint(obj)
 pprint(obj['Body'].read())
