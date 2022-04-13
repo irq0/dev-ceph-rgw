@@ -1,5 +1,10 @@
 #+TITLE: RGW Simplefile SAL
 
+* Code
+WIP code lives in
+https://github.com/irq0/ceph/tree/wip/rgw-simple-file. Will be force
+pushed occasionally.
+
 * Development
 ** Build
 Add =-DWITH_RADOSGW_SIMPLEFILE=ON= to cmake. For example:
