@@ -1,0 +1,32 @@
+#+TITLE: RGW Simplefile SAL
+
+* Development
+** Build
+Add =-DWITH_RADOSGW_SIMPLEFILE=ON= to cmake. For example:
+#+begin_src
+cmake  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DWITH_CCACHE=ON  -DWITH_RADOSGW_DBSTORE=ON -DWITH_RADOSGW_SIMPLEFILE=ON  -DDIAGNOSTICS_COLOR=always ..
+#+end_src
+
+** Running RGW
+#+begin_src sh
+bin/radosgw --conf ceph-rgw.conf -d --no-mon-config
+#+end_src
+
+** Configuration
+#+begin_src conf-windows :tangle ceph-rgw.conf
+[global]
+erasure code dir = /home/seri/WORKSPACE/ceph/build/lib
+plugin dir = /home/seri/WORKSPACE/ceph/build/lib
+run dir = /home/seri/WORKSPACE/ceph/build/out
+crash dir = /home/seri/WORKSPACE/ceph/build/out
+err to stderr = true
+log to stderr = true
+debug rgw = 20
+debug rgw sync = 20
+
+[client]
+rgw backend store = simplefile
+rgw enable ops log = true
+rgw log object name = true
+rgw simplefile data path = /home/seri/WORKSPACE/dev-ceph-rgw/rgw_data_dir
+#+end_src
